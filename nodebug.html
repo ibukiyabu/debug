@@ -10,6 +10,10 @@
   ];
 
   var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+
+  //デバッグ処理
+  console.log(sampleArrayB);
+
   for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
     document.write("sampleArrayB[" + counterVar + "]: ");
     document.write(sampleArrayB[counterVar]);
