@@ -1,6 +1,14 @@
 <script type="text/javascript">
   function toOneDimension(previousValue, currentValue) {
-    return previousValue.concat(currentValue);
+    //previousValueとcurrentValueの配列を可視化
+    console.log("previousValue", previousValue);
+    console.log("currentValue", currentValue);
+
+    //上2つを結合した結果
+    console.log("concat", currentValue.concat(previousValue));
+
+    //修正：上記結果からcurrentValueとpreviousValueを逆にした
+    return currentValue.concat(previousValue);
   }
 
   var sampleArrayA = [
@@ -9,12 +17,7 @@
     ["C1", "C2", "C3"],
   ];
 
-  const reversed = sampleArrayA.reverse();
-
-  var sampleArrayB = reversed.reduce(toOneDimension);
-
-  //デバッグ処理
-  console.log(sampleArrayB);
+  var sampleArrayB = sampleArrayA.reduce(toOneDimension);
 
   for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
     document.write("sampleArrayB[" + counterVar + "]: ");

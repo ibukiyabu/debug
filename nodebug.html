@@ -1,5 +1,11 @@
 <script type="text/javascript">
   function toOneDimension(previousValue, currentValue) {
+    //previousValueとcurrentValueの配列を可視化
+    console.log("previousValue", previousValue);
+    console.log("currentValue", currentValue);
+
+    //上2つを結合した結果
+    console.log("concat", previousValue.concat(currentValue));
     return previousValue.concat(currentValue);
   }
 
@@ -7,12 +13,10 @@
     ["A1", "A2", "A3"],
     ["B1", "B2", "B3"],
     ["C1", "C2", "C3"],
+    ß,
   ];
 
   var sampleArrayB = sampleArrayA.reduce(toOneDimension);
-
-  //デバッグ処理
-  console.log(sampleArrayB);
 
   for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
     document.write("sampleArrayB[" + counterVar + "]: ");
